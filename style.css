@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/background.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  line-height: 65px;
+}
+
+.logo {
+  width: 120px;
+}
+
+nav ul {
+  flex: 1;
+  text-align: right;
+  margin-right: 50px;
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  align-items: right;
+  margin: 0 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #d63197;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  height: 35px;
+  width: 110px;
+  background: #d63197;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  border-top-right-radius: 30px;
+}
+
+.btn img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.row-content {
+  display: flex;
+  padding: 0 8%;
+}
+
+.col-content-1 {
+  flex: 1;
+}
+
+.col-content-1 h2 {
+  font-size: 65px;
+  margin-top: 120px;
+  color: #fff;
+  font-family: serif;
+  margin-bottom: 20px;
+}
+
+.col-content-1 p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  background: #fff;
+}
+
+.btn-box input {
+  width: 100%;
+  background: transparent;
+  padding: 10px 20px;
+  outline: 0;
+  border: 0;
+}
+
+.btn-box button {
+  padding: 10px 15px;
+  width: 110px;
+  border: 0;
+  outline: 0;
+  background: #d63197;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.col-content-2 {
+  flex: 1;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  padding: 2% 0 2% 8%;
+}
+
+.gallery {
+  width: 200px;
+  height: 100px;
+  padding: 15px 10px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.gallery img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.gallery:hover {
+  transform: translateY(-10px);
+}
+
+.dispPng {
+  display: none;
+  margin-left: 0;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+.menupng {
+  width: 25px;
+  background: #fff;
+  border-radius: 50%;
+}
+/*----------------- Responsive Design----------------- */
+
+@media screen and (max-width: 480px) {
+  .dispPng {
+    display: block;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    position: fixed;
+    background: #d63197;
+    top: 70px;
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 30px auto;
+    line-height: 50px;
+  }
+
+  .btn {
+    margin-right: -100px;
+    font-size: 13px;
+    width: 90px;
+    height: 25px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+  }
+
+  #checkbox:checked ~ ul {
+    left: 0;
+  }
+
+  .btn:hover {
+    border-top-right-radius: 20px;
+  }
+
+  .row-content {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col-content-1 {
+    width: 100%;
+  }
+
+  .col-content-1 h2 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+
+  .col-content-1 p {
+    font-size: 10px;
+  }
+
+  .col-content-2 {
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px auto;
+  }
+
+  .gallery {
+    width: 125px;
+    height: 40px;
+    padding: 0;
+    margin: 5px 10px;
+    height: 30%;
+  }
+
+  .gallery img {
+    width: 80%;
+    height: 50%;
+  }
+
+  .btn-box {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .btn-box button {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+}
